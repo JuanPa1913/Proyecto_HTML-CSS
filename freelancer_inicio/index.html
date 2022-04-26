@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD: Información importante para el navegador -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Diseñador Freelancer </title> 
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href= "css/normalize.css"> <!-- Primero cargar normalize -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Primero lo de los estilos de letra -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style"> <!-- Hace que la página cargue más rápido -->
+    <link href="css/style.css" rel="stylesheet"> <!-- Para usar el css -->
+</head>
+<!-- BODY: Información importante para el usuario -->
+<!-- Estructurar Contenido: Separar la diferente informaciín de la página -->
+<body>
+    <header> 
+        <!-- ENCABEZADO -->
+        <h1 class="titulo"> Juan Pablo Giraldo <span> Freelancer </span></h1>    <!-- Selecciona una parte del texto -->    
+    </header>    
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contactos</a>
+        </nav>
+    </div>
+    
+    <section class="hero">
+        <div class="contenido-hero">
+            <!-- Al ser un Headings( encabezado secundario) se usa section -->
+            <h2> Diseño y Desarrollo Web <span> Freelancer </span></h2>
+            
+
+            <div class="ubicacion">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="11" r="3" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+                <p>  Medellín, Antioquía </p>
+            </div>
+            <a class="boton" href="#">Contactar</a> <!-- Se recomienda en minusculas porque con CSS se puede modificar a mayúsculas -->
+        </div>
+       
+    </section> 
+
+    <main class="contenedor sombra">
+            <h2> Mis Servicios </h2>
+
+            <div class="servicios">
+                <section class="servicio" >
+                    <h3> Diseño Web </h3>
+                    <div class="iconos">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brush" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M3 21v-4a4 4 0 1 1 4 4h-4" />
+                            <path d="M21 3a16 16 0 0 0 -12.8 10.2" />
+                            <path d="M21 3a16 16 0 0 1 -10.2 12.8" />
+                            <path d="M10.6 9a9 9 0 0 1 4.4 4.4" />
+                        </svg>
+                    </div>
+                    <p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. </p>    
+                </section>
+            
+                <section class="servicio" >
+                    <h3> Aplicaciones Móviles </h3>
+                    <div class="iconos">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apps" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="6" height="6" rx="1" />
+                            <rect x="4" y="14" width="6" height="6" rx="1" />
+                            <rect x="14" y="14" width="6" height="6" rx="1" />
+                            <line x1="14" y1="7" x2="20" y2="7" />
+                            <line x1="17" y1="4" x2="17" y2="10" />
+                        </svg>
+                    </div>
+                    <p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. </p>    
+                </section>
+                
+                <section class="servicio">
+                    <h3> E-Commerce </h3>
+                    <div class="iconos">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-stripe" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M11.453 8.056c0 -.623 .518 -.979 1.442 -.979c1.69 0 3.41 .343 4.605 .923l.5 -4c-.948 -.449 -2.82 -1 -5.5 -1c-1.895 0 -3.373 .087 -4.5 1c-1.172 .956 -2 2.33 -2 4c0 3.03 1.958 4.906 5 6c1.961 .69 3 .743 3 1.5c0 .735 -.851 1.5 -2 1.5c-1.423 0 -3.963 -.609 -5.5 -1.5l-.5 4c1.321 .734 3.474 1.5 6 1.5c2.004 0 3.957 -.468 5.084 -1.36c1.263 -.979 1.916 -2.268 1.916 -4.14c0 -3.096 -1.915 -4.547 -5.003 -5.637c-1.646 -.605 -2.544 -1.07 -2.544 -1.807z" />
+                        </svg>
+                    </div>
+                    <p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. </p> 
+                </section>
+            </div>
+
+        <section class="contenedor">
+            <h2> Contacto </h2>
+
+            <form class="formulario">
+                <fieldset>  <!-- Conjunto de controles de formulario agrupados por tema -->
+                    <legend> Contactános llenando todos los campos </legend> <!-- Defina un nombre para un conjunto de campos. Describe el formulario-->
+                    <div class="contenedor-campos">
+                        <div class="campos">
+                            <label> Nombre </label>
+                            <input class="input-text" type="text" placeholder ="Nombre" ><!-- TEL sirve para poder copiar en moviles/ Email: Texto con @/ number: solo numeros -->
+                                                                    <!-- Placeholder: Aparece un texto por defecto -->
+                        </div>
+
+                        <div class="campos">
+                            <label> Teléfono </label>
+                            <input class="input-text" type="tel" placeholder ="Teléfono" >
+                        </div>
+
+                        <div class="campos">
+                            <label> Correo </label>
+                            <input class="input-text" type="email" placeholder ="Correo" >
+                        </div>
+
+                        <div class="campos">
+                            <label> Mensaje </label>
+                            <textarea class="input-text"></textarea> <!-- Más espacio para escibir -->
+                        </div>
+                        
+                        <div class="alinear-derecha flex">
+                            <input class="boton w-sm-100" type="submit" value="Enviar" > <!-- Lo mismo que el button -->
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p> Todos los derechos reservados. Juan Pablo Giraldo </p>
+    </footer>
+</body>
+</html>

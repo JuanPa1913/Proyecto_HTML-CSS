@@ -1,0 +1,345 @@
+:root { /* define los colores (variables css) */
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+
+    /*--fuente-principal: 3.8rem;*/
+}
+
+/* GLOBALES */
+html {
+    font-size: 62.5%; /* USAR SIEMPRE AL DAR ESTILOS "Hack", para reiniciar el tamaño a 62-5% y usar el rem*/
+    box-sizing: border-box; /* que se adapte el padding*/
+    scroll-snap-type: y mandatory; /* y vertical */
+}
+ /* SCROLL SNAP */
+ .servicios,
+ .navegacion-principal,
+ .formulario {
+     scroll-snap-align: center;
+     scroll-snap-stop: always;
+ }
+ 
+ 
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/*la coma sirve para aplicarle a varias cosas lo mismo
+.titulo, .subtitulo{
+    text-align: center;
+    font-size: 3.8rem;
+}
+*/
+
+body { /* Se aplica a todo el documento*/
+    font-size: 16px; /* USAR SIEMPRE AL DAR ESTILOS "Hack", para reiniciar el tamaño */ /* 1rem = 10 px ej 20rem = 200px*/
+    font-family: 'Krub', sans-serif;
+    margin: 0;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%); /* degrado de fondo*
+                                    /*1. Pasar el color (to top, to right..)
+                                    2. Porcewntajes de degradado */
+}
+
+.contenedor { /*CENTRA TODO*/
+    max-width: 120rem; /* fluye mejor */
+    margin: 0 auto;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none; /* quita la raya que subraya*/
+    text-transform: uppercase; /* lo pone en mayusculas*/
+    font-weight: bold; /* lo pone en negrilla*/
+    border-radius:  .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+@media screen and (min-width: 480px) {
+    .boton{
+        width: auto;
+    }
+}
+.boton:hover{ /* hover es cuando te colocas encima del elemento*/
+    cursor: pointer; /* pone la mano al pasar el cursor */
+}
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+}
+/* TIPOGRAFÍA */
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,h2,h3 { /* Esto es una clase */
+    text-align: center; /* centra el texto */
+    /*font-size: var(--fuente-principal); 38 pixeles */
+    /* color: var(--primario);*/
+}
+
+/* TITULOS */
+.titulo span { /* NO LO APLICA A TODOS LOS SPAN, solo donde su padre sea un titulo */
+    font-size: 2rem;  /* tamaño del texto (mejor usar rem para que se adapte a todos los dispositivos, que es relativo al documento) */
+}
+
+
+ /*UTILIDADES*/
+.w-sm-100{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .w-sm-100{
+        width: auto;
+    }    
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end;
+}
+.nav-bg {
+    background-color: var(--secundario); /* color fondo*/
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) { /* en celulares se adapte la navegacion (este se usa en tablets)*/
+    .navegacion-principal{
+        flex-direction: row; /* lo reiniciamos para ponerlo por default*/
+        /*align-items: center;  centra verticalmente*/
+        justify-content: space-between; /* centrar horizontalmente*/
+    }
+}
+
+/*
+@media (min-width: 1140px) {  en celulares se adapte la navegacion
+    480px celularess
+    768px tablets
+    1140, 1400 computador
+    
+}
+*/
+
+/* NAVECACIÓN PRINCIPAL*/
+.navegacion-principal a{
+    display: block; /* toma todo el espacio*/
+    text-align: center; /* centra verticalmente*/ 
+    color: var(--blanco);
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+    font-weight: 700; /*negrita*/
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.navegacion-principal a:hover { /* Al poner le cursor encima se pone de un color */ 
+    background-color: var(--primario);
+    color: var(--oscuro); 
+}
+
+/* hero */
+.hero {
+    background-image: url(../Imagenes/hero.jpg) ; /* imagen de fondo*/
+    background-repeat: no-repeat; /* para que no repita la imagen*/
+    background-size: cover; /* la imagen toma todo el ancho disponible*/
+    height: 410px;
+    /*padding: 20px;  se quita el padding para pder que le afecte el
+                     widthy height al 100% */
+    position: relative; /* lo debe tener siempre elpadre para que el 
+                        hijo se pueda posicionar de forma absoluta*/
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    /*background-color: red; crea un cuadrito rojo*/
+
+   /* background-color: rgba(0,0,0, .7); /*el cuarto es el nivel
+                                     de transparencia (0 a 1 
+                                     (0 totalmente oscuro))*/
+
+    background-color: rgb(0 0 0 / 70%); /*el cuarto es el nivel
+                                     de transparencia (0 a 100% 
+                                     (0 totalmente oscuro))*/
+
+    /*top: 0; /* pone ese cuadrito arriba*/
+    /*right: 0;  al combinarlo con el de top lo pone arriba a la derecha*/
+    /* Si ponemos todos en cero, lo toma todo completo*/
+
+    /*top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;*/
+
+    /* o al hacer lo siguiente, tambien lo toma todo 
+      pero le afecta el padding (tocaría quitarlo)*/
+    width: 100%;
+    height: 100%;
+    
+    /*ESTE CODIGO SE UTILIZA PARA ALINIAR TANTO HORZIONTAL 
+        COMO VERTICALMENTE ( OSEA DEJARLO EN EL CENTRO)*/
+    display: flex; /* SE PONE TODO DE IZQ A DER */
+    flex-direction: column; /* al poner column el align-items cambia a 
+                            horizontal*/
+    align-items: center;
+    justify-content: center;
+} 
+
+.contenido-hero h2,
+.contenido-hero p { /* usamos el css de modulos*/
+    color: var(--blanco);
+
+}
+.contenido-hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* SERVICIOS */
+@media (min-width: 768px) {
+    .servicios {
+        display: grid; /* se parece a una tabla html*/
+        /*grid-template-columns: 300px 300px; /* 2 columnas de 300px*/
+        /*grid-template-rows: 200px 800px; /* 2 rows, arriba, abajo */   
+        
+        /*grid-template-columns: 33.3% 33.3% 33.3%; /* crea 3 columnas del 100%
+                                                    100/3= 33.3 */
+    
+        /*grid-template-columns: 1fr 1fr 1fr; /* crea 3 columnas ( lo mismo que
+                                            con porcentaje 
+                                            (si pongo 2 fr y los otros en 1
+                                            uno va a ser mas grande)*/
+        grid-template-columns: repeat(3, 1fr); /* Para acortar la sintasis,
+                                            se pone...*/
+    
+    
+        /*grid: 200px 800px / 200px 300px; /* lo mismo, (rows/column) */
+        column-gap: 1rem;/* 10px agrega separación*/
+    }
+    
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column; /* tiene row por defecto, se cambia a colum
+                            para que quede bien */
+    align-items: center; /*alinear verticalmente*/
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 2;
+    text-align: center
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /*alinear horizontalmente*/
+    align-items: center; /*alinear verticalmente*/
+}
+
+/* CONTACTO */
+
+
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%); /* utilizar el valor más pequeño */
+    margin: 0 auto; /* lo centra horizontalmmente */
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700; /*negrita*/
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+@media (min-width: 768px) { 
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    .campos:nth-child(3),
+    .campos:nth-child(4){ /* si hay varios y pongo uno selecionaa
+                        solo el primero (en este caso
+                        selecciona el 3 que tenga campos)*/
+        grid-column: 1 / 3; /* pone que la columna vaya de la 1 a la 2
+                                segun firefox developer*/
+    }
+}
+
+.campos{
+    margin-bottom: 1rem;
+}
+
+.campos label{
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block; /* todo el espacio que halla disponible*/
+}
+
+/*
+SE PUEDE ESCRIBIR ASI PARA SELECIONAR CADA UNO
+.campos input[type="text"],
+.campos input[type="tel"]{
+    background-color: red;
+}*/
+.campos textarea {
+    height: 20rem;
+}
+.input-text{
+    width: 100%;
+    border: none;    
+    padding: 1.5rem;
+    border-radius: .5rem; 
+}
+
+.footer{
+ text-align: center;
+}
