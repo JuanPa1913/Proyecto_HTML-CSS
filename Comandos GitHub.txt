@@ -1,3 +1,0 @@
-1. git add Comandos GitHub.txt
-2. git commit -m "Añdimos en el archivo hola.txt un saludo"
-3. git push
